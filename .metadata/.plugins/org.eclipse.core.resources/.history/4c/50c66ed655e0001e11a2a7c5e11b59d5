@@ -1,0 +1,15 @@
+//import javax.swing.JOptionPane;
+import java.lang.Math;
+
+public class simpleCalculation {
+    public static void main(String[] args) {
+        // Using JOptionPane for user input
+    	System.out.println("I am here");
+       // String input = JOptionPane.showInputDialog("Enter a number:");
+       // double number = Double.parseDouble(input);
+
+        // Using Math class for mathematical operations
+        double squareRoot = Math.sqrt(number);
+        //JOptionPane.showMessageDialog(null, "Square root of " + number + " is " + squareRoot);
+    }
+}
