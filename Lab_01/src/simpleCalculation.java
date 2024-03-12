@@ -6,9 +6,11 @@ public class simpleCalculation {
     	String str1, str2;
     	double num1, num2;
     	
+    	// Input
     	str1 = JOptionPane.showInputDialog("Enter the first number: ");
     	str2 = JOptionPane.showInputDialog("Enter the second number: ");
     	
+    	// Convert
     	num1 = Double.parseDouble(str1);
     	num2 = Double.parseDouble(str2);
     	
