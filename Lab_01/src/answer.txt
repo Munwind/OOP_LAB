@@ -3,4 +3,5 @@ The output should be "NO"
 
 -How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do”
 and “I don’t”:
-To customize the options, we change the showConfirmDialog to showOptionDialog 
+
+We can customize to : JOptionPane.showConfirmDialog(null,"Yes", "No", JOptionPane.YES_NO_OPTION);
