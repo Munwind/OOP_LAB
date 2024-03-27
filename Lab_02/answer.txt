@@ -1,0 +1,3 @@
+Answer:
+
+Yes, you can create multiple constructor methods within a class, each with a different set of parameters.
