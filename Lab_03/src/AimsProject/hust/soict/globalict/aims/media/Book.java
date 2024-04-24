@@ -43,5 +43,7 @@ public class Book extends Media{
 				", cost=" + this.getCost() + ", authors=" + authors + "]";
 	}
 	
-	
+	public boolean isMatch(String title){
+        return this.title.equals(title);
+    }
 }

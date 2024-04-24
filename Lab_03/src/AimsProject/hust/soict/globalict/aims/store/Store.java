@@ -23,7 +23,7 @@ public class Store {
 		}
 		else System.out.println("Does not exist!");
 	}
-	s
+	
 	public void displayInfo() {
 		System.out.println("**********Store**********");
 		System.out.println("Items: ");

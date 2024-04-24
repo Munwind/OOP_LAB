@@ -1,10 +1,8 @@
 package AimsProject.hust.soict.globalict.aims.cart;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-import AimsProject.hust.soict.globalict.aims.disc.DigitalVideoDisc;
-import AimsProject.hust.soict.globalict.aims.media.Book;
-import AimsProject.hust.soict.globalict.aims.media.CompactDisc;
 import AimsProject.hust.soict.globalict.aims.media.Media;
 
 public class Cart {
@@ -84,5 +82,13 @@ public class Cart {
 		System.out.println("Does not exist!");
 	}
 	
+	// Check these functions
+	public void sortByTitleCost() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+	}
+	
+	public void sortByCostTitle() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+	}
 }
 

@@ -1,8 +1,8 @@
 package AimsProject.hust.soict.globalict.aims.media;
 
-public class Disc extends Media{
-	private int length;
-	private String director;
+public abstract class Disc extends Media{
+	protected int length;
+	protected String director;
 	
 	public Disc(int id, String title, String category, String director, int length, float cost) {
 		super(id, title, category, cost);

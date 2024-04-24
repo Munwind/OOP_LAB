@@ -45,4 +45,7 @@ public class CompactDisc extends Disc implements Playable{
 		System.out.println("The artist: " + artist);
 		for (Track track : tracks) track.play();	
 	}
+	public boolean isMatch(String title) {
+		return this.getTitle().equals(title);
+	}
 }
