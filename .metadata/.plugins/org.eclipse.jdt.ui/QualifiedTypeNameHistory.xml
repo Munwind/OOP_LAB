@@ -2,4 +2,13 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="AimsProject.hust.soict.globalict.aims.disc.DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="AimsProject.hust.soict.globalict.aims.media.Playable"/>
+    <fullyQualifiedTypeName name="AimsProject.hust.soict.globalict.aims.media.Track"/>
+    <fullyQualifiedTypeName name="AimsProject.hust.soict.globalict.aims.media.CompactDisc"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
