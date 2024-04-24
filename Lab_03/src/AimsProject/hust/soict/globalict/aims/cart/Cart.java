@@ -64,20 +64,24 @@ public class Cart {
 		System.out.println("************************");
 	}
 	
-	// Search for the DVD by Title
-	public void isMatch(String titleFind) {
-		int count = 1;
-		for (Media item : itemsOrdered) {
-			if (item == null) break;
-			
-			if (item.getTitle().equals(titleFind)) {
-				System.out.println(count + " - " + item);
+	public void searchInCart(int id) {
+		for (Media element : itemsOrdered) {
+			if (element.getId() == id) {
+				System.out.println(element);
 				return;
 			}
-			count += 1;
 		}
-		
-		System.out.println("There's no items with that title!");
+		System.out.println("Does not exist!");
+	}
+	
+	public void searchInCart(String title) {
+		for (Media element : itemsOrdered) {
+			if (element.isMatch(title)) {
+				System.out.println(element);
+				return;
+			}
+		}
+		System.out.println("Does not exist!");
 	}
 	
 }

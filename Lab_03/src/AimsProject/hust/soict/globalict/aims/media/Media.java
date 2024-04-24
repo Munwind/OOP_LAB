@@ -2,10 +2,10 @@ package AimsProject.hust.soict.globalict.aims.media;
 
 public abstract class Media {
 	
-	private int id;
-	private String title;
-	private String category;
-	private float cost;
+	protected int id;
+	protected String title;
+	protected String category;
+	protected float cost;
 	
 	public Media(int id, String title, String category, float cost) {
 		super();
@@ -52,5 +52,18 @@ public abstract class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
+
+	@Override
+	public String toString() {
+		return "Media [id=" + id + ", title=" + title + ", category=" + category + ", cost=" + cost + "]";
+	}
 	
+	public abstract boolean isMatch(String title);
+	
+	public boolean equals(Media m) {
+		if (m == this) return true;
+		Media new_m = (Media) m;
+		
+		return title.equals(new_m.getTitle());
+	}
 }

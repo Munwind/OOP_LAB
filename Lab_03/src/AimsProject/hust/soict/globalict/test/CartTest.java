@@ -20,9 +20,10 @@ public class CartTest {
 		cart.addMedia(dvd3);
 		
 		cart.displayInfo();
-		cart.isMatch("The lion King");
-		cart.isMatch("akjf");
-		cart.isMatch("Aladin");
+		cart.searchInCart(1);
+		cart.searchInCart(4);
+		cart.searchInCart("The lion King");
+		cart.searchInCart("Munwind");
 		dvd1.play();
 		
 		
