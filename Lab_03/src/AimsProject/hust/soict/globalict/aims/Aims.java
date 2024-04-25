@@ -50,19 +50,21 @@ public class Aims {
 		
 		do {
 			showMenu();
+			System.out.print("Your choice: ");
 			choice = scanner.nextInt();
 			scanner.nextLine();
 			
 			switch (choice) {
 				case 1:
 					store.displayInfo();
+					int choice1;
 					do {
 						storeMenu();
 						System.out.print("Your choice: ");
-						choice = scanner.nextInt();
+						choice1 = scanner.nextInt();
 						scanner.nextLine();
 						
-						switch(choice) {
+						switch(choice1) {
 							case 1:
 								// See media's detail
 								System.out.print("Enter title: ");
@@ -70,15 +72,15 @@ public class Aims {
 								Media mediaToSearch = store.searchByTitle(strToInput);
 								if (mediaToSearch == null) System.out.println("Does not exist!");
 								else {
-									
+									int newChoice1;
 									System.out.println(mediaToSearch);
 									do {
 										mediaDetailsMenu();
 										System.out.print("Your choice: ");
-										choice = scanner.nextInt();
+										newChoice1 = scanner.nextInt();
 										scanner.nextLine();
 										
-										switch(choice) {
+										switch(newChoice1) {
 										case 1:
 											cart.addMedia(mediaToSearch);
 											break;
@@ -100,7 +102,7 @@ public class Aims {
 											System.out.println("Invalid choice!");
 										
 										}
-									}while (choice != 0);
+									} while (newChoice1 != 0);
 								}
 								break;
 							case 2:
@@ -138,23 +140,24 @@ public class Aims {
 							default:
 								System.out.println("Invalid choice!");
 						}
-						// Complete later
-					}while (choice != 0);
+					}while (choice1 != 0);
 					break;
 					
 				case 2:
-					// Completed case 2
+					
+					int choice2;
 					do {
 						System.out.println("1. Add media");
 						System.out.println("2. Remove media");
 						System.out.println("0. Exit");
 						System.out.print("Your choice: ");
-						choice = scanner.nextInt();
+						choice2 = scanner.nextInt();
 						scanner.nextLine();
 						
-						switch(choice) {
+						switch(choice2) {
 						// Add media
 						case 1:
+							int newChoice2;
 							do {
 								// Complete compactdisc later
 								System.out.println("Choose the type");
@@ -162,11 +165,11 @@ public class Aims {
 								System.out.println("2. Book");
 								System.out.println("0. Back");
 								System.out.print("Your choice: ");
-								choice = scanner.nextInt();
+								newChoice2 = scanner.nextInt();
 								scanner.nextLine();
 								
 								// Input the update
-								switch(choice) {
+								switch(newChoice2) {
 									case 1:
 										int id, length;
 										String title, category, director;
@@ -215,7 +218,7 @@ public class Aims {
 										System.out.println("Invalid choice!");
 								}
 								
-							} while (choice != 0);
+							} while (newChoice2 != 0);
 							
 						case 2:
 							// Remove
@@ -232,28 +235,30 @@ public class Aims {
 							System.out.println("Invalid choice!");
 						}
 						
-					} while (choice != 0);
+					} while (choice2 != 0);
 					break;
 				
 			
 				case 3:
+					int choice3;
 					do {
 						cartMenu();
 						System.out.print("Your choice: ");
-						choice = scanner.nextInt();
+						choice3 = scanner.nextInt();
 						scanner.nextLine();
 						
-						switch(choice) {
+						switch(choice3) {
 						case 1:
+							int newChoice3_1;
 							// Filter media in cart
 							do {
 								System.out.println("1. Search by ID");
 								System.out.println("2. Search by title");
 								System.out.println("0. Back");
 								System.out.print("Your choice: ");
-								choice = scanner.nextInt();
+								newChoice3_1 = scanner.nextInt();
 								scanner.nextLine();
-								switch(choice) {
+								switch(newChoice3_1) {
 									case 1:
 										int idInput = scanner.nextInt();
 										scanner.nextLine();
@@ -269,23 +274,28 @@ public class Aims {
 										System.out.println("Invalid choice!");
 								}
 								
-							} while (choice != 0);
+							} while (newChoice3_1 != 0);
 							break;
 						case 2:
 							// Sort media in cart
+							int newChoice3_2;
 							do {
 								System.out.println("1. Search by title");
 								System.out.println("2. Search by cost");
 								System.out.println("0. Back");
 								System.out.print("Your choice: ");
-								choice = scanner.nextInt();
+								newChoice3_2 = scanner.nextInt();
 								scanner.nextLine();
-								switch(choice) {
+								switch(newChoice3_2) {
 									case 1:
 										// Sort by title
+										cart.sortByTitleCost();
+										cart.displayInfo();
 										break;
 									case 2:
 										// Sort by cost
+										cart.sortByCostTitle();
+										cart.displayInfo();
 										break;
 									case 0:
 										break;
@@ -293,7 +303,7 @@ public class Aims {
 										System.out.println("Invalid choice!");
 								}
 								
-							} while(choice != 0);
+							} while(newChoice3_2 != 0);
 							break;
 							
 						case 3:
@@ -327,6 +337,8 @@ public class Aims {
 							
 						case 5:
 							// Place order
+							System.out.println("Successfully created!");
+							cart = new Cart();
 							break;
 						case 0:
 							break;
@@ -335,7 +347,7 @@ public class Aims {
 						
 						}
 						
-					}while(choice !=0);
+					}while(choice3 !=0);
 					break;
 					
 				case 0:
