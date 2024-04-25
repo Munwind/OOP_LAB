@@ -68,9 +68,11 @@ public abstract class Media {
 	
 	public abstract boolean isMatch(String title);
 	
-	public boolean equals(Media m) {
-		if (m == this) return true;
-		Media new_m = (Media) m;
+	public boolean equals(Object obj) {
+		
+		if (obj == this) return true;
+		
+		Media new_m = (Media) obj;
 		
 		return title.equals(new_m.getTitle());
 	}

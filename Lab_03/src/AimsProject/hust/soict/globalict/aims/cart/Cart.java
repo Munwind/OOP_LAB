@@ -27,6 +27,13 @@ public class Cart {
 			System.out.println("The media does not exist!");
 	}
 	
+	public Media search(String title) {
+		for (Media element : itemsOrdered) {
+			if (title.equals(element.getTitle())) return element;
+		}
+		return null;
+	}
+	
 	public float totalCost() {
 		float total_cost = 0;
 		for (Media dvd : itemsOrdered) {

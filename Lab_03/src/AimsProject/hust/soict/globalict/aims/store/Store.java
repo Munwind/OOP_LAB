@@ -24,6 +24,16 @@ public class Store {
 		else System.out.println("Does not exist!");
 	}
 	
+	public Media searchByTitle(String title) {
+		for (Media element : itemsInStore) {
+			if (title.equals(element.getTitle())) {
+				return element;
+			}
+			
+		}
+		return null;
+	}
+	
 	public void displayInfo() {
 		System.out.println("**********Store**********");
 		System.out.println("Items: ");
